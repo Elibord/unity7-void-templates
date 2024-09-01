@@ -1,23 +1,23 @@
 pkgname=unity7-chromatic-git
-base_version=750.git
+base_version=7.5.0
 extra_version=
 version=${base_version}${extra_version}
 revision=1
-wrksrc="unity7-git"
+wrksrc="unity7-chromatic-git"
 
-homepage="https://github.com/alekseyt/unity7-git"
+homepage="https://github.com/Elibord/unity7-void"
 license="GPL"
 short_desc="Chromatic launcher (derived from Unity 7)"
 maintainer=" <>"
 
 depends="unity7-asset-pool unity7-scope-home unity7-lens-applications unity7-lens-files"
-hostmakedepends="pkg-config cmake intltool git"
-makedepends="gtk+3-devel libnotify-devel appstream-glib-devel json-glib-devel
- libdbusmenu-glib-devel startup-notification-devel libsigc++-devel glibmm-devel
- libX11-devel libXi-devel libXfixes-devel libXrender-devel glu-devel
- libICE-devel libSM-devel zeitgeist-devel libxslt-devel boost-devel
- bamf-devel libindicator-devel geis-devel
- unity7-glewmx-devel unity7-nux unity7-libunity"
+hostmakedepends="pkg-config cmake intltool git gcc"
+makedepends="gtk+3-devel doxygen libnotify-devel appstream-glib-devel json-glib-devel
+ libdbusmenu-glib-devel libXxf86vm-devel startup-notification-devel libsigc++-devel glibmm-devel
+ libX11-devel libXi-devel libXfixes-devel extra-cmake-modules libXrender-devel glu-devel
+ libICE-devel libSM-devel zeitgeist-devel leatherman-devel libxslt-devel boost-devel
+ bamf-devel libayatana-indicator-devel python3-Cython ayatana-ido-devel leatherman geis-devel
+ unity7-glewmx-devel unity7-nux unity7-libunity compiz-unity"
 
 build_style="cmake"
 configure_args="-DENABLE_COMPIZ=OFF -DENABLE_UNIT_TESTS=OFF -Duse_pch=OFF"
